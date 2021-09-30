@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "149009370921",
+    "project_id": "reel-mood-wallet-app",
+    "storage_bucket": "reel-mood-wallet-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:149009370921:android:31ca4f4a1eb4e60dd43138",
+        "android_client_info": {
+          "package_name": "com.reelmood.reelmoodapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "149009370921-allhsvrchtd962eh3f7kp18evju9pobv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.reelmood.reelmoodapp",
+            "certificate_hash": "c71ea65856dc3108310944395118a824b16c1d79"
+          }
+        },
+        {
+          "client_id": "149009370921-jm6ko673ee9up76om9tjdsaensvj42sp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2UyQBFijk7squhqdnyVqve69HKpX6LlI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "149009370921-jm6ko673ee9up76om9tjdsaensvj42sp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
