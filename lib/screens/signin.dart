@@ -6,9 +6,11 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:line_icons/line_icon.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:realmood/screens/OtpForLoggingUser.dart';
 import 'package:realmood/screens/home.dart';
 import 'package:realmood/screens/navigationbar.dart';
 import 'package:realmood/screens/signup.dart';
+import 'package:realmood/session.dart';
 import 'package:realmood/utils/constant.dart';
 import 'package:realmood/widgets/inputWidget.dart';
 import 'package:realmood/widgets/pressedwidget.dart';
@@ -87,9 +89,12 @@ class _SignInState extends State<SignIn> {
                             passwordController.text, context
                           );
                           if(isLoading == false){
+                            await App.init();
+                            await App.localStorage!.setString("id", '${FirebaseAuth.instance.currentUser!.uid}');
                             Navigator.pushReplacement(
                               context,
-                              MaterialPageRoute(builder: (context) => NavBar()),
+                              MaterialPageRoute(builder: (context) =>
+                                  NavBar()),
                             );
                           }
                         }

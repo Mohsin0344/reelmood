@@ -40,7 +40,7 @@ class _SendCoinsState extends State<SendCoins> {
             color: Colors.white,
           ),
         ),
-        title: Text('Receive'),
+        title: Text('Send'),
         centerTitle: true,
       ),
       body: ListView(
@@ -53,14 +53,16 @@ class _SendCoinsState extends State<SendCoins> {
               alignment: Alignment.centerLeft,
               child: Text(
                   'Send Crypto',
-                  style: TextStyle(fontSize: 18, color: secondaryColor)
+                  style: TextStyle(fontSize: 18,
+                      color: secondaryColor)
               )
           ),
           Align(
               alignment: Alignment.centerLeft,
               child: Text(
                   'Select a wallet',
-                  style: TextStyle(fontSize: 12, color: secondaryColor.withOpacity(0.5))
+                  style: TextStyle(fontSize: 12,
+                      color: secondaryColor.withOpacity(0.5))
               )
           ),
           SizedBox(
