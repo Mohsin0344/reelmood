@@ -14,11 +14,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "149009370921-allhsvrchtd962eh3f7kp18evju9pobv.apps.googleusercontent.com",
+          "client_id": "149009370921-gd56ns47h28koq7glqadu5m5mhphdetu.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.reelmood.reelmoodapp",
-            "certificate_hash": "c71ea65856dc3108310944395118a824b16c1d79"
+            "certificate_hash": "ff98680f692df967b48fe693b65aeb42b8be5e5b"
           }
         },
         {

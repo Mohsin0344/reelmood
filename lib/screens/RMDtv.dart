@@ -11,34 +11,11 @@ class RMDtv extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: primaryColor,
-      appBar: getAppBar(),
-      body: Container(
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image(
-                image: AssetImage(
-                  'assets/Logo1.png',
-                ),
-                height: 70,
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Text(
-                'COMING SOON',
-                style: style1.copyWith(fontSize: 16),
-              ),
-              SizedBox(
-                height: 5,
-              ),
-              Text(
-                'reelmood.tv',
-                style: style2.copyWith(
-                    color: secondaryColor.withOpacity(0.5), fontSize: 10),
-              ),
-            ],
+      body: SafeArea(
+        child: Container(
+          height: double.infinity,
+          child: Image.asset('assets/cms.png',
+          fit: BoxFit.cover,
           ),
         ),
       ),

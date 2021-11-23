@@ -3,6 +3,8 @@ import 'package:clipboard/clipboard.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 import 'package:realmood/DepositAddress/DepositAddressModel.dart';
 import 'package:realmood/Strings.dart';
 import 'package:realmood/utils/constant.dart';
@@ -70,7 +72,7 @@ class _ReceiveCoinsState extends State<ReceiveCoins> {
                   },
                   child: Container(
                     width: double.infinity,
-                    height: 70,
+                    height: 180,
                     decoration: BoxDecoration(
                         color: fifthColor,
                         borderRadius: BorderRadius.circular(20)
@@ -86,10 +88,24 @@ class _ReceiveCoinsState extends State<ReceiveCoins> {
                             children: [
                               Expanded(
                                 child: Align(
-                                  alignment: Alignment.bottomLeft,
+                                  alignment: Alignment.center,
                                   child: Text(
                                     'RMD',
                                     style: style2.copyWith(fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                flex: 2,
+                                child: Padding(
+                                  padding: EdgeInsets.only(
+                                    left: Get.width * 0.17
+                                  ),
+                                  child: QrImage(
+                                    data: "${snapshot.data}",
+                                    version: QrVersions.auto,
+                                    foregroundColor: Colors.white,
+                                    size: 200.0,
                                   ),
                                 ),
                               ),
@@ -138,7 +154,7 @@ class _ReceiveCoinsState extends State<ReceiveCoins> {
                     },
                     child: Container(
                       width: double.infinity,
-                      height: 70,
+                      height: 180,
                       decoration: BoxDecoration(
                           color: fifthColor,
                           borderRadius: BorderRadius.circular(20)
@@ -154,10 +170,24 @@ class _ReceiveCoinsState extends State<ReceiveCoins> {
                               children: [
                                 Expanded(
                                   child: Align(
-                                    alignment: Alignment.bottomLeft,
+                                    alignment: Alignment.center,
                                     child: Text(
                                       'BTC',
                                       style: style2.copyWith(fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 2,
+                                  child: Padding(
+                                    padding: EdgeInsets.only(
+                                        left: Get.width * 0.17
+                                    ),
+                                    child: QrImage(
+                                      data: "${snapshot.data}",
+                                      version: QrVersions.auto,
+                                      foregroundColor: Colors.white,
+                                      size: 200.0,
                                     ),
                                   ),
                                 ),
@@ -206,7 +236,7 @@ class _ReceiveCoinsState extends State<ReceiveCoins> {
                     },
                     child: Container(
                       width: double.infinity,
-                      height: 70,
+                      height: 180,
                       decoration: BoxDecoration(
                           color: fifthColor,
                           borderRadius: BorderRadius.circular(20)
@@ -222,10 +252,24 @@ class _ReceiveCoinsState extends State<ReceiveCoins> {
                               children: [
                                 Expanded(
                                   child: Align(
-                                    alignment: Alignment.bottomLeft,
+                                    alignment: Alignment.center,
                                     child: Text(
                                       'ETH',
                                       style: style2.copyWith(fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 2,
+                                  child: Padding(
+                                    padding: EdgeInsets.only(
+                                        left: Get.width * 0.17
+                                    ),
+                                    child: QrImage(
+                                      data: "${snapshot.data}",
+                                      version: QrVersions.auto,
+                                      foregroundColor: Colors.white,
+                                      size: 200.0,
                                     ),
                                   ),
                                 ),
@@ -274,7 +318,7 @@ class _ReceiveCoinsState extends State<ReceiveCoins> {
                     },
                     child: Container(
                       width: double.infinity,
-                      height: 70,
+                      height: 180,
                       decoration: BoxDecoration(
                           color: fifthColor,
                           borderRadius: BorderRadius.circular(20)
@@ -290,10 +334,24 @@ class _ReceiveCoinsState extends State<ReceiveCoins> {
                               children: [
                                 Expanded(
                                   child: Align(
-                                    alignment: Alignment.bottomLeft,
+                                    alignment: Alignment.center,
                                     child: Text(
                                       'LTC',
                                       style: style2.copyWith(fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 2,
+                                  child: Padding(
+                                    padding: EdgeInsets.only(
+                                        left: Get.width * 0.17
+                                    ),
+                                    child: QrImage(
+                                      data: "${snapshot.data}",
+                                      version: QrVersions.auto,
+                                      foregroundColor: Colors.white,
+                                      size: 200.0,
                                     ),
                                   ),
                                 ),
@@ -342,7 +400,7 @@ class _ReceiveCoinsState extends State<ReceiveCoins> {
                     },
                     child: Container(
                       width: double.infinity,
-                      height: 70,
+                      height: 180,
                       decoration: BoxDecoration(
                           color: fifthColor,
                           borderRadius: BorderRadius.circular(20)
@@ -350,7 +408,7 @@ class _ReceiveCoinsState extends State<ReceiveCoins> {
                       child: Row(
                         children: [
                           Expanded(
-                            child: imageCard('assets/lite.png'),
+                            child: imageCard('assets/bch.png'),
                           ),
                           Expanded(
                             flex: 3,
@@ -358,10 +416,24 @@ class _ReceiveCoinsState extends State<ReceiveCoins> {
                               children: [
                                 Expanded(
                                   child: Align(
-                                    alignment: Alignment.bottomLeft,
+                                    alignment: Alignment.center,
                                     child: Text(
                                       'BCH',
                                       style: style2.copyWith(fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 2,
+                                  child: Padding(
+                                    padding: EdgeInsets.only(
+                                        left: Get.width * 0.17
+                                    ),
+                                    child: QrImage(
+                                      data: "${snapshot.data}",
+                                      version: QrVersions.auto,
+                                      foregroundColor: Colors.white,
+                                      size: 200.0,
                                     ),
                                   ),
                                 ),
@@ -410,7 +482,7 @@ class _ReceiveCoinsState extends State<ReceiveCoins> {
                     },
                     child: Container(
                       width: double.infinity,
-                      height: 70,
+                      height: 180,
                       decoration: BoxDecoration(
                           color: fifthColor,
                           borderRadius: BorderRadius.circular(20)
@@ -418,7 +490,7 @@ class _ReceiveCoinsState extends State<ReceiveCoins> {
                       child: Row(
                         children: [
                           Expanded(
-                            child: imageCard('assets/lite.png'),
+                            child: imageCard('assets/ada.png'),
                           ),
                           Expanded(
                             flex: 3,
@@ -426,10 +498,24 @@ class _ReceiveCoinsState extends State<ReceiveCoins> {
                               children: [
                                 Expanded(
                                   child: Align(
-                                    alignment: Alignment.bottomLeft,
+                                    alignment: Alignment.center,
                                     child: Text(
                                       'ADA',
                                       style: style2.copyWith(fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 2,
+                                  child: Padding(
+                                    padding: EdgeInsets.only(
+                                        left: Get.width * 0.17
+                                    ),
+                                    child: QrImage(
+                                      data: "${snapshot.data}",
+                                      version: QrVersions.auto,
+                                      foregroundColor: Colors.white,
+                                      size: 200.0,
                                     ),
                                   ),
                                 ),
@@ -478,7 +564,7 @@ class _ReceiveCoinsState extends State<ReceiveCoins> {
                     },
                     child: Container(
                       width: double.infinity,
-                      height: 70,
+                      height: 180,
                       decoration: BoxDecoration(
                           color: fifthColor,
                           borderRadius: BorderRadius.circular(20)
@@ -486,7 +572,7 @@ class _ReceiveCoinsState extends State<ReceiveCoins> {
                       child: Row(
                         children: [
                           Expanded(
-                            child: imageCard('assets/lite.png'),
+                            child: imageCard('assets/bnb.png'),
                           ),
                           Expanded(
                             flex: 3,
@@ -494,10 +580,24 @@ class _ReceiveCoinsState extends State<ReceiveCoins> {
                               children: [
                                 Expanded(
                                   child: Align(
-                                    alignment: Alignment.bottomLeft,
+                                    alignment: Alignment.center,
                                     child: Text(
                                       'BNB',
                                       style: style2.copyWith(fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 2,
+                                  child: Padding(
+                                    padding: EdgeInsets.only(
+                                        left: Get.width * 0.17
+                                    ),
+                                    child: QrImage(
+                                      data: "${snapshot.data}",
+                                      version: QrVersions.auto,
+                                      foregroundColor: Colors.white,
+                                      size: 200.0,
                                     ),
                                   ),
                                 ),
@@ -546,7 +646,7 @@ class _ReceiveCoinsState extends State<ReceiveCoins> {
                     },
                     child: Container(
                       width: double.infinity,
-                      height: 70,
+                      height: 180,
                       decoration: BoxDecoration(
                           color: fifthColor,
                           borderRadius: BorderRadius.circular(20)
@@ -554,7 +654,7 @@ class _ReceiveCoinsState extends State<ReceiveCoins> {
                       child: Row(
                         children: [
                           Expanded(
-                            child: imageCard('assets/lite.png'),
+                            child: imageCard('assets/doge.png'),
                           ),
                           Expanded(
                             flex: 3,
@@ -562,10 +662,24 @@ class _ReceiveCoinsState extends State<ReceiveCoins> {
                               children: [
                                 Expanded(
                                   child: Align(
-                                    alignment: Alignment.bottomLeft,
+                                    alignment: Alignment.center,
                                     child: Text(
                                       'DOGE',
                                       style: style2.copyWith(fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 2,
+                                  child: Padding(
+                                    padding: EdgeInsets.only(
+                                        left: Get.width * 0.17
+                                    ),
+                                    child: QrImage(
+                                      data: "${snapshot.data}",
+                                      version: QrVersions.auto,
+                                      foregroundColor: Colors.white,
+                                      size: 200.0,
                                     ),
                                   ),
                                 ),
@@ -614,7 +728,7 @@ class _ReceiveCoinsState extends State<ReceiveCoins> {
                     },
                     child: Container(
                       width: double.infinity,
-                      height: 70,
+                      height: 180,
                       decoration: BoxDecoration(
                           color: fifthColor,
                           borderRadius: BorderRadius.circular(20)
@@ -630,10 +744,24 @@ class _ReceiveCoinsState extends State<ReceiveCoins> {
                               children: [
                                 Expanded(
                                   child: Align(
-                                    alignment: Alignment.bottomLeft,
+                                    alignment: Alignment.center,
                                     child: Text(
                                       'MATIC',
                                       style: style2.copyWith(fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 2,
+                                  child: Padding(
+                                    padding: EdgeInsets.only(
+                                        left: Get.width * 0.17
+                                    ),
+                                    child: QrImage(
+                                      data: "${snapshot.data}",
+                                      version: QrVersions.auto,
+                                      foregroundColor: Colors.white,
+                                      size: 200.0,
                                     ),
                                   ),
                                 ),

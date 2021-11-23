@@ -1,7 +1,10 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:realmood/screens/signin.dart';
+import 'package:realmood/session.dart';
 import 'package:realmood/utils/constant.dart';
 import 'package:realmood/widgets/profileCard.dart';
 
@@ -186,7 +189,13 @@ class Setting extends StatelessWidget {
                       Container(
                         height: 40,
                         child: ListTile(
-                          onTap: () {},
+                          onTap: () async{
+                            await App.init();
+                            await FirebaseAuth.instance.signOut();
+                            await App.localStorage!.setString('id', '0');
+                            Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) =>
+                                SignIn()), (Route<dynamic> route) => false);
+                          },
                           title: Text(
                             'Log Out',
                             style: style2.copyWith(fontSize: 13),

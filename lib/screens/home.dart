@@ -19,6 +19,7 @@ import 'package:realmood/Strings.dart';
 import 'package:realmood/models/homeModel.dart';
 import 'package:realmood/screens/ReceiveScreen.dart';
 import 'package:realmood/screens/SendCoins.dart';
+import 'package:realmood/screens/WebViewRmd.dart';
 import 'package:realmood/utils/constant.dart';
 import 'package:realmood/widgets/homewidget.dart';
 import 'package:realmood/widgets/pressedwidget.dart';
@@ -248,45 +249,54 @@ class _HomeState extends State<Home> {
                               ),
                             ),
                           ),
-                          Container(
-                            height: Get.height * 0.15,
-                            width: Get.width * 0.25,
-                            child: Column(
-                              children: [
-                                Expanded(
-                                  flex: 3,
-                                  child: Padding(
-                                      padding: EdgeInsets.only(
-                                          top:10,
-                                        bottom: 10
-                                      ),
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(13.93),
-                                          color: const Color(0xff262a34),
+                          InkWell(
+                            onTap: (){
+                              Navigator.push(context,
+                                  MaterialPageRoute(
+                                      builder: (context)=> RmdNews()));
+                            },
+                            child: Container(
+                              height: Get.height * 0.15,
+                              width: Get.width * 0.25,
+                              child: Column(
+                                children: [
+                                  Expanded(
+                                    flex: 3,
+                                    child: Padding(
+                                        padding: EdgeInsets.only(
+                                            top:10,
+                                          bottom: 10
                                         ),
-                                        child: Padding(
-                                            padding: EdgeInsets.all(20),
-                                            child: Image.asset('assets/buy.png')),
-                                      )
-                                  ),
-                                ),
-                                Expanded(
-                                  child: Center(
-                                    child: Text(
-                                      'Buy',
-                                      style: GoogleFonts.poppins(
-                                        fontSize: 11.942790031433105,
-                                        color: const Color(0xffffffff),
-                                        height: 1.2000000319414246,
-                                      ),
-                                      textHeightBehavior:
-                                      TextHeightBehavior(applyHeightToFirstAscent: false),
-                                      textAlign: TextAlign.left,
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(13.93),
+                                            color: const Color(0xff262a34),
+                                          ),
+                                          child: Padding(
+                                              padding: EdgeInsets.all(20),
+                                              child: Image.asset('assets/buy.png',
+                                              width: Get.width * 0.08,
+                                              )),
+                                        )
                                     ),
                                   ),
-                                )
-                              ],
+                                  Expanded(
+                                    child: Center(
+                                      child: Text(
+                                        'Buy',
+                                        style: GoogleFonts.poppins(
+                                          fontSize: 11.942790031433105,
+                                          color: const Color(0xffffffff),
+                                          height: 1.2000000319414246,
+                                        ),
+                                        textHeightBehavior:
+                                        TextHeightBehavior(applyHeightToFirstAscent: false),
+                                        textAlign: TextAlign.left,
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                           InkWell(
